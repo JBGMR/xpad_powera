@@ -17,8 +17,7 @@ sudo apt install dkms
 ```
 Other distros (build it yourself):
 
-[gregkh/usbutils](https://github.com/gregkh/usbutils)
-[dell/dkms](https://github.com/dell/dkms)
+[gregkh/usbutils](https://github.com/gregkh/usbutils) and [dell/dkms](https://github.com/dell/dkms)
 
 # Your model not working?
 Open a new issue in this repository and send the output of the following command:

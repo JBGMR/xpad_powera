@@ -27,38 +27,8 @@
  *  - Pekka Pöyry (quantus) - Xbox One controller reverse engineering
  *
  * TODO:
- *  - fine tune axes (especially trigger axes)
- *  - fix "analog" buttons (reported as digital now)
- *  - get rumble working
- *  - need USB IDs for other dance pads
+ *  - Add more controllers
  *
- * History:
- *
- * 2002-06-27 - 0.0.1 : first version, just said "XBOX HID controller"
- *
- * 2002-07-02 - 0.0.2 : basic working version
- *  - all axes and 9 of the 10 buttons work (german InterAct device)
- *  - the black button does not work
- *
- * 2002-07-14 - 0.0.3 : rework by Vojtech Pavlik
- *  - indentation fixes
- *  - usb + input init sequence fixes
- *
- * 2002-07-16 - 0.0.4 : minor changes, merge with Vojtech's v0.0.3
- *  - verified the lack of HID and report descriptors
- *  - verified that ALL buttons WORK
- *  - fixed d-pad to axes mapping
- *
- * 2002-07-17 - 0.0.5 : simplified d-pad handling
- *
- * 2004-10-02 - 0.0.6 : DDR pad support
- *  - borrowed from the XBOX linux kernel
- *  - USB id's for commonly used dance pads are present
- *  - dance pads will map D-PAD to buttons, not axes
- *  - pass the module paramater 'dpad_to_buttons' to force
- *    the D-PAD to map to buttons if your pad is not detected
- *
- * Later changes can be tracked in SCM.
  */
 // #define DEBUG
 #include <linux/kernel.h>
@@ -308,6 +278,7 @@ static const struct xpad_device {
     { 0x20d6, 0x2001, "PowerA Wired Controller For Xbox 360", 0, XTYPE_XBOXONE },
     { 0x20d6, 0x200c, "PowerA Wired Controller For Xbox 360", 0, XTYPE_XBOXONE },
 	{ 0x20d6, 0x281f, "PowerA Wired Controller For Xbox 360", 0, XTYPE_XBOX360 },
+    { 0x24c6, 0x542a, "PowerA Spectra Controller", 0, XTYPE_XBOXONE },
 	{ 0x24c6, 0x5000, "Razer Atrox Arcade Stick", MAP_TRIGGERS_TO_BUTTONS, XTYPE_XBOX360 },
 	{ 0x24c6, 0x5300, "PowerA MINI PROEX Controller", 0, XTYPE_XBOX360 },
 	{ 0x24c6, 0x5303, "Xbox Airflo wired controller", 0, XTYPE_XBOX360 },

@@ -32,10 +32,11 @@ I will add your controller ASAP! you can also add it yourself like this:
 Download from releases and extract the file. Go inside the folder of the extracted file and open a terminal
 ```
 sudo sh install.sh
-
 ```
 # Removing
 ```
+rudo rmmod xpad
 sudo dkms remove -m xpad -v 0.4 --all
 sudo rm -rf /usr/src/xpad-0.4
+sudo reboot
 ```

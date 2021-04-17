@@ -15,4 +15,5 @@ echo 'Installing...'
 sudo cp -r src/ /usr/src/xpad-0.4
 sudo dkms install -m xpad -v 0.4
 sudo modprobe xpad
-sudo reboot
+
+echo "Your controller should work now. If it still doesn't work after a reboot, open a GitHub issue with the lsusb output."
